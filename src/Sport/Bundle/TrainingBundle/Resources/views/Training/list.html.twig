@@ -1,0 +1,7 @@
+{% for entity in entities %}
+    <div>
+        <a href="{{ path('sport_training_training_detail', {'id': entity.id}) }}">{{ entity.name }}</a>
+        {{ entity.validFrom|date('Y-m-d') }},
+        {{ entity.validTo|date('Y-m-d') }}
+    </div>
+{% endfor%}

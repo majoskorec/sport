@@ -1,0 +1,8 @@
+<div>
+    {{ entity.name }}, {{ entity.validFrom|date('Y-m-d') }} - {{ entity.validTo|date('Y-m-d') }}
+</div>
+{% for session in entity.activeSessions %}
+    <div>
+        {{ session.scheduledDate|date('Y-m-d H:i') }} stav: {{ session.trainingSessionStatus.name }}
+    </div>
+{% endfor%}

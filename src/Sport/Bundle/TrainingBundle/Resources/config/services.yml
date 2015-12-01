@@ -1,0 +1,8 @@
+parameters:
+    sport_training.training.manager.class: Sport\Bundle\TrainingBundle\Entity\Manager\TrainingManager
+    
+services:
+    sport_training.training.manager:
+        class: %sport_training.training.manager.class%
+        arguments:
+            - @doctrine.orm.entity_manager
